@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be697198-27b2-4290-b645-88145d02cbfd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SocialNetwork.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/mysocialnetwork/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/mysocialnetwork/servlet/AuthServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/mysocialnetwork/servlet/LogoutServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/mysocialnetwork/servlet/MainPageServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/mysocialnetwork/servlet/RegServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/mainPage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/reg.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/mysocialnetwork/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/mysocialnetwork/entity/User.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +35,7 @@
   <component name="PropertiesComponent">
     <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -53,6 +43,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -214,7 +205,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1576174156464</updated>
-      <workItem from="1576174159560" duration="8159000" />
+      <workItem from="1576174159560" duration="9082000" />
+      <workItem from="1576602637616" duration="558000" />
     </task>
     <servers />
   </component>
@@ -226,7 +218,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
