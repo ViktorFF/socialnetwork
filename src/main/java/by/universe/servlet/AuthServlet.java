@@ -25,10 +25,12 @@ public class AuthServlet extends HttpServlet {
         for (User user : (List<User>) getServletContext().getAttribute("userList")) {
             if (user.equals(currentUser) && user.getPassword().equals(currentUser.getPassword())) {
                 req.getSession().setAttribute("currentUser", user);
-                req.getSession().setAttribute("currentUserName", user.getFirstName());
+                req.getSession().setAttribute("currentUserFirstName", user.getFirstName());
+                req.getSession().setAttribute("currentUserLogin", user.getLogin());
+                req.getSession().setAttribute("currentUserPassword", user.getPassword());
                 req.getRequestDispatcher("/mainPage.jsp").forward(req, resp);
             }
         }
-        req.getRequestDispatcher("/auth.jsp").forward(req, resp);
+        resp.sendRedirect("/auth.jsp");
     }
 }

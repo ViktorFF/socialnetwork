@@ -8,7 +8,7 @@ public class User {
     private String role = "user";
     private String firstName;
     private String lastName;
-    private int age;
+    private String birthday;
     private String country;
     private String city;
     private String login;
@@ -57,12 +57,12 @@ public class User {
         this.lastName = lastName;
     }
 
-    public int getAge() {
-        return age;
+    public String getBirthday() {
+        return birthday;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
     }
 
     public String getCountry() {
@@ -101,9 +101,10 @@ public class User {
     public String toString() {
         return "User{" +
                 "id=" + id +
+                ", role='" + role + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", age=" + age +
+                ", birthday='" + birthday + '\'' +
                 ", country='" + country + '\'' +
                 ", city='" + city + '\'' +
                 ", login='" + login + '\'' +

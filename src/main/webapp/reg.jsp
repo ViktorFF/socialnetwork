@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Registration</title>
+    <title>Universe - Registration</title>
 </head>
 <body>
     <form action="reg" method="post">

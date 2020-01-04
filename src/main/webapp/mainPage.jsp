@@ -4,6 +4,11 @@
     <title>Universe</title>
 </head>
 <body>
-
+    <form action="profile" method="get">
+        <button type="submit">My Profile</button>
+    </form>
+    <form action="logout" method="get">
+        <button type="submit">Logout</button>
+    </form>
 </body>
 </html>
