@@ -41,7 +41,7 @@
             <button type="submit" name="fieldChange" value="password">Change</button>
         </p>
     </form>
-    <form action="mainPage.jsp" method="get">
+    <form action="mainPage" method="get">
         <button type="submit">Main Page</button>
     </form>
 </body>
