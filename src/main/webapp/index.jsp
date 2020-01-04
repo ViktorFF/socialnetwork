@@ -1,16 +1,14 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: user
-  Date: 12.12.2019
-  Time: 21:17
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Start Page</title>
+    <title>Universe - Start Page</title>
 </head>
 <body>
-
+    <form action="auth" method="get">
+        <button>SignIn</button>
+    </form>
+    <form action="reg" method="get">
+        <button type="submit">Registration</button>
+    </form>
 </body>
 </html>

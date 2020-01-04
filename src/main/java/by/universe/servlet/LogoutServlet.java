@@ -1,4 +1,4 @@
-package by.mysocialnetwork.servlet;
+package by.universe.servlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

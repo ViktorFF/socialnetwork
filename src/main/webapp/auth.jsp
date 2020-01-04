@@ -1,15 +1,17 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: user
+  Date: 04.01.2020
+  Time: 22:00
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Registration</title>
+    <title>Authentication</title>
 </head>
 <body>
-    <form action="reg" method="post">
-        <p>
-            <label>First Name:
-                <input type="text" name="firstName" required placeholder="First Name">
-            </label>
-        </p>
+    <form action="auth" method="post">
         <p>
             <label>Login:
                 <input type="email" name="login" required placeholder="Login">
@@ -21,7 +23,7 @@
             </label>
         </p>
         <p>
-            <button type="submit">Registry</button>
+            <button type="submit">SignIn</button>
         </p>
     </form>
 </body>

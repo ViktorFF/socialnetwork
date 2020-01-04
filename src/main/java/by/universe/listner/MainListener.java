@@ -1,11 +1,18 @@
+package by.universe.listner;
+
+import by.universe.entity.User;
+
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
+import javax.servlet.annotation.WebListener;
 import javax.servlet.http.HttpSessionAttributeListener;
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 import javax.servlet.http.HttpSessionBindingEvent;
+import java.util.ArrayList;
+import java.util.List;
 
-@javax.servlet.annotation.WebListener()
+@WebListener()
 public class MainListener implements ServletContextListener,
         HttpSessionListener, HttpSessionAttributeListener {
 
@@ -21,6 +28,11 @@ public class MainListener implements ServletContextListener,
          initialized(when the Web application is deployed). 
          You can initialize servlet context related data here.
       */
+        List<User> userList = new ArrayList<>();
+        User admin = new User("Admin","admin@universe.com", "admin");
+        admin.setRole("admin");
+        userList.add(admin);
+        sce.getServletContext().setAttribute("userList", userList);
     }
 
     public void contextDestroyed(ServletContextEvent sce) {
