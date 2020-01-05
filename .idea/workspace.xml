@@ -7,7 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be697198-27b2-4290-b645-88145d02cbfd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/universe/servlet/MainPageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/universe/servlet/MainPageServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/universe/servlet/FieldChangeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/universe/servlet/FieldChangeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/fieldChange.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fieldChange.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/profile.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,7 +55,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Calculator" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -227,7 +229,7 @@
       <updated>1576174156464</updated>
       <workItem from="1576174159560" duration="9082000" />
       <workItem from="1576602637616" duration="4142000" />
-      <workItem from="1578159325745" duration="15263000" />
+      <workItem from="1578159325745" duration="19610000" />
     </task>
     <task id="LOCAL-00001" summary="fix#1&#10;Registration, authentication and exit added to the project">
       <created>1578166939446</created>
@@ -243,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578175400378</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fix#2&#10;Main page, logout, profile page added to the project">
+      <created>1578175662692</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1578175662692</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

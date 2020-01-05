@@ -16,6 +16,7 @@ public class FieldChangeServlet extends HttpServlet {
         String fieldChange = req.getParameter("fieldChange");
         User currentUser = (User) req.getSession().getAttribute("currentUser");
         req.getSession().setAttribute("fieldChange", fieldChange);
+        req.setAttribute("birthdayFlag", false);
         switch (fieldChange) {
             case "firstName":
                 req.getSession().setAttribute("oldValue", currentUser.getFirstName());
@@ -25,6 +26,7 @@ public class FieldChangeServlet extends HttpServlet {
                 break;
             case "birthday":
                 req.getSession().setAttribute("oldValue", currentUser.getBirthday());
+                req.setAttribute("birthdayFlag", true);
                 break;
             case "country":
                 req.getSession().setAttribute("oldValue", currentUser.getCountry());
@@ -56,7 +58,8 @@ public class FieldChangeServlet extends HttpServlet {
                 req.getSession().setAttribute("currentUserLastName", currentUser.getLastName());
                 break;
             case "birthday":
-                currentUser.setBirthday(req.getParameter("newValue"));
+                currentUser.setBirthday(req.getParameter("date") + " " + req.getParameter("month") +
+                        " " + req.getParameter("year"));
                 req.getSession().setAttribute("currentUserBirthday", currentUser.getBirthday());
                 break;
             case "country":
