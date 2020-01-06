@@ -9,8 +9,8 @@ import javax.servlet.http.HttpSessionAttributeListener;
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 import javax.servlet.http.HttpSessionBindingEvent;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 @WebListener()
 public class MainListener implements ServletContextListener,
@@ -28,11 +28,11 @@ public class MainListener implements ServletContextListener,
          initialized(when the Web application is deployed). 
          You can initialize servlet context related data here.
       */
-        List<User> userList = new ArrayList<>();
-        User admin = new User("Admin","admin@universe.com", "admin");
+        Map<String, User> userMap = new HashMap<>();
+        User admin = new User("Admin","", "", "", "","admin@universe.com", "admin");
         admin.setRole("admin");
-        userList.add(admin);
-        sce.getServletContext().setAttribute("userList", userList);
+        userMap.put(admin.getLogin(), admin);
+        sce.getServletContext().setAttribute("userMap", userMap);
     }
 
     public void contextDestroyed(ServletContextEvent sce) {
@@ -47,6 +47,8 @@ public class MainListener implements ServletContextListener,
     // -------------------------------------------------------
     public void sessionCreated(HttpSessionEvent se) {
         /* Session is created. */
+        se.getSession().setAttribute("loginError", false);
+        se.getSession().setAttribute("passwordError", false);
     }
 
     public void sessionDestroyed(HttpSessionEvent se) {
@@ -70,7 +72,7 @@ public class MainListener implements ServletContextListener,
     }
 
     public void attributeReplaced(HttpSessionBindingEvent sbe) {
-      /* This method is invoked when an attibute
+      /* This method is invoked when an attribute
          is replaced in a session.
       */
     }

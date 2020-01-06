@@ -7,9 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be697198-27b2-4290-b645-88145d02cbfd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/universe/servlet/FieldChangeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/universe/servlet/FieldChangeServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/fieldChange.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fieldChange.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/universe/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/universe/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/universe/listner/MainListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/universe/listner/MainListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/universe/servlet/AuthServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/universe/servlet/AuthServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/universe/servlet/ProfileServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/universe/servlet/ProfileServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/universe/servlet/RegServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/universe/servlet/RegServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/auth.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/auth.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/mainPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/mainPage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/profile.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,6 +57,7 @@
   <component name="ProjectId" id="1UtRy7kqPtsgCKEZkLcV4IrOVk1" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
@@ -229,7 +236,9 @@
       <updated>1576174156464</updated>
       <workItem from="1576174159560" duration="9082000" />
       <workItem from="1576602637616" duration="4142000" />
-      <workItem from="1578159325745" duration="19610000" />
+      <workItem from="1578159325745" duration="20754000" />
+      <workItem from="1578309421811" duration="5319000" />
+      <workItem from="1578315335868" duration="3544000" />
     </task>
     <task id="LOCAL-00001" summary="fix#1&#10;Registration, authentication and exit added to the project">
       <created>1578166939446</created>
@@ -252,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578175662692</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix#3&#10;Setting profile functionality">
+      <created>1578184693686</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1578184693686</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,6 +290,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix#1&#10;Registration, authentication and exit added to the project" />
     <MESSAGE value="fix#2&#10;Main page, logout, profile page added to the project" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix#2&#10;Main page, logout, profile page added to the project" />
+    <MESSAGE value="fix#3&#10;Setting profile functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix#3&#10;Setting profile functionality" />
   </component>
 </project>

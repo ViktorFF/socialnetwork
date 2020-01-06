@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
+import java.util.Map;
 
 @WebServlet(urlPatterns = "/reg")
 public class RegServlet extends HttpServlet {
@@ -27,14 +27,15 @@ public class RegServlet extends HttpServlet {
             req.getRequestDispatcher("/reg.jsp").forward(req, resp);
         }
 
-        User newUser = new User(firstName, login, password);
-        List<User> userList = (List<User>) req.getServletContext().getAttribute("userList");
-        for (User user: userList) {
-            if (user.equals(newUser)) {
+
+        Map<String, User> userMap = (Map<String, User>) req.getServletContext().getAttribute("userMap");
+        for (String key: userMap.keySet()) {
+            if (key.equals(login)) {
                 req.getRequestDispatcher("/reg.jsp").forward(req, resp);
             }
         }
-        userList.add(newUser);
+        User newUser = new User(firstName, "", "", "", "", login, password);
+        userMap.put(newUser.getLogin(), newUser);
         resp.sendRedirect("/index.jsp");
     }
 }

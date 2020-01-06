@@ -16,30 +16,7 @@ public class ProfileServlet extends HttpServlet {
         User currentUser = (User) req.getSession().getAttribute("currentUser");
         req.getSession().setAttribute("currentUserId", currentUser.getId());
         req.getSession().setAttribute("currentUserRole", currentUser.getRole());
-
-        if (currentUser.getLastName() == null) {
-            req.getSession().setAttribute("currentUserLastName", "");
-        } else {
-            req.getSession().setAttribute("currentUserLastName", currentUser.getLastName());
-        }
-
-        if (currentUser.getLastName() == null) {
-            req.getSession().setAttribute("currentUserBirthday", "");
-        } else {
-            req.getSession().setAttribute("currentUserBirthday", currentUser.getBirthday());
-        }
-
-        if (currentUser.getLastName() == null) {
-            req.getSession().setAttribute("currentUserCountry", "");
-        } else {
-            req.getSession().setAttribute("currentUserCountry", currentUser.getCountry());
-        }
-
-        if (currentUser.getLastName() == null) {
-            req.getSession().setAttribute("currentUserCity", "");
-        } else {
-            req.getSession().setAttribute("currentUserCity", currentUser.getCity());
-        }
+        req.getSession().setAttribute("currentUserLastName", currentUser.getLastName());
         req.getRequestDispatcher("/profile.jsp").forward(req, resp);
     }
 

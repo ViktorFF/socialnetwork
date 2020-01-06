@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
+import java.util.Map;
 
 @WebServlet(urlPatterns = "/auth")
 public class AuthServlet extends HttpServlet {
@@ -21,16 +21,26 @@ public class AuthServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String login = req.getParameter("login");
         String password = req.getParameter("password");
-        User currentUser = new User(login, password);
-        for (User user : (List<User>) getServletContext().getAttribute("userList")) {
-            if (user.equals(currentUser) && user.getPassword().equals(currentUser.getPassword())) {
-                req.getSession().setAttribute("currentUser", user);
-                req.getSession().setAttribute("currentUserFirstName", user.getFirstName());
-                req.getSession().setAttribute("currentUserLogin", user.getLogin());
-                req.getSession().setAttribute("currentUserPassword", user.getPassword());
-                req.getRequestDispatcher("/mainPage.jsp").forward(req, resp);
+        Map<String, User> userMap = (Map<String, User>) req.getServletContext().getAttribute("userMap");
+        if (userMap.containsKey(login)) {
+            if (password.equals(userMap.get(login).getPassword())) {
+                User currentUser = userMap.get(login);
+                req.getSession().setAttribute("currentUser", currentUser);
+                req.getSession().setAttribute("currentUserFirstName", currentUser.getFirstName());
+                req.getSession().setAttribute("currentUserLastName", currentUser.getLastName());
+                req.getSession().setAttribute("currentUserBirthday", currentUser.getBirthday());
+                req.getSession().setAttribute("currentUserCountry", currentUser.getCountry());
+                req.getSession().setAttribute("currentUserCity", currentUser.getCity());
+                req.getSession().setAttribute("currentUserLogin", currentUser.getLogin());
+                req.getSession().setAttribute("currentUserPassword", currentUser.getPassword());
+                resp.sendRedirect("/mainPage.jsp");
+            } else {
+                req.setAttribute("passwordError", true);
+                req.getRequestDispatcher("/auth.jsp").forward(req, resp);
             }
+        } else {
+            req.setAttribute("loginError", true);
+            req.getRequestDispatcher("/auth.jsp").forward(req, resp);
         }
-        resp.sendRedirect("/auth.jsp");
     }
 }
