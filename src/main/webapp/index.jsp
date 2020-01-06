@@ -4,11 +4,16 @@
     <title>Universe - Start Page</title>
 </head>
 <body>
-    <form action="auth" method="get">
-        <button>SignIn</button>
-    </form>
-    <form action="reg" method="get">
-        <button type="submit">Registration</button>
-    </form>
+    <header>
+        <h1>Welcome to the Universe</h1>
+    </header>
+    <main>
+        <form action="auth" method="get">
+            <button>SignIn</button>
+        </form>
+        <form action="reg" method="get">
+            <button type="submit">Registration</button>
+        </form>
+    </main>
 </body>
 </html>

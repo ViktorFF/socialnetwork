@@ -26,6 +26,8 @@ public class AuthServlet extends HttpServlet {
             if (password.equals(userMap.get(login).getPassword())) {
                 User currentUser = userMap.get(login);
                 req.getSession().setAttribute("currentUser", currentUser);
+                req.getSession().setAttribute("currentUserId", currentUser.getId());
+                req.getSession().setAttribute("currentUserRole", currentUser.getRole());
                 req.getSession().setAttribute("currentUserFirstName", currentUser.getFirstName());
                 req.getSession().setAttribute("currentUserLastName", currentUser.getLastName());
                 req.getSession().setAttribute("currentUserBirthday", currentUser.getBirthday());
