@@ -1,5 +1,9 @@
 package by.universe.entity;
 
+import by.universe.entity.messages.Post;
+
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Objects;
 
 public class User {
@@ -13,6 +17,7 @@ public class User {
     private String city;
     private String login;
     private String password;
+    private List<Post> posts = new LinkedList<>();
 
     public User() {
 
@@ -105,6 +110,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public List<Post> getPosts() {
+        return posts;
+    }
+
+    public void setPosts(List<Post> posts) {
+        this.posts = posts;
     }
 
     @Override

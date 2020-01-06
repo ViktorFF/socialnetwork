@@ -1,6 +1,7 @@
 package by.universe.listner;
 
 import by.universe.entity.User;
+import by.universe.entity.messages.Post;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
@@ -10,6 +11,8 @@ import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 import javax.servlet.http.HttpSessionBindingEvent;
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 
 @WebListener()
@@ -30,8 +33,10 @@ public class MainListener implements ServletContextListener,
       */
         Map<String, User> userMap = new HashMap<>();
         User admin = new User("Admin","", "", "", "","admin@universe.com", "admin");
+
         admin.setRole("admin");
         userMap.put(admin.getLogin(), admin);
+
         sce.getServletContext().setAttribute("userMap", userMap);
     }
 

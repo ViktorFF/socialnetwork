@@ -26,6 +26,7 @@ public class AuthServlet extends HttpServlet {
             if (password.equals(userMap.get(login).getPassword())) {
                 User currentUser = userMap.get(login);
                 req.getSession().setAttribute("currentUser", currentUser);
+                req.getSession().setAttribute("user", currentUser);
                 req.getSession().setAttribute("currentUserId", currentUser.getId());
                 req.getSession().setAttribute("currentUserRole", currentUser.getRole());
                 req.getSession().setAttribute("currentUserFirstName", currentUser.getFirstName());
@@ -35,7 +36,8 @@ public class AuthServlet extends HttpServlet {
                 req.getSession().setAttribute("currentUserCity", currentUser.getCity());
                 req.getSession().setAttribute("currentUserLogin", currentUser.getLogin());
                 req.getSession().setAttribute("currentUserPassword", currentUser.getPassword());
-                resp.sendRedirect("/mainPage.jsp");
+                req.getSession().setAttribute("currentUserPosts", currentUser.getPosts());
+                resp.sendRedirect("/user");
             } else {
                 req.setAttribute("passwordError", true);
                 req.getRequestDispatcher("/auth.jsp").forward(req, resp);

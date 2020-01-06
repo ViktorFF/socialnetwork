@@ -14,9 +14,11 @@ public class UserPageServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         User user = (User) req.getSession().getAttribute("user");
+        req.getSession().setAttribute("currentUserFlag", false);
 
         if (user.equals(req.getSession().getAttribute("currentUser"))) {
-            req.getRequestDispatcher("/mainPage.jsp").forward(req, resp);
+            user = (User) req.getSession().getAttribute("currentUser");
+            req.getSession().setAttribute("currentUserFlag", true);
         }
 
         req.getSession().setAttribute("userFirstName", user.getFirstName());
@@ -24,6 +26,7 @@ public class UserPageServlet extends HttpServlet {
         req.getSession().setAttribute("userBirthday", user.getBirthday());
         req.getSession().setAttribute("userCountry", user.getCountry());
         req.getSession().setAttribute("userCity", user.getCity());
+        req.getSession().setAttribute("userPosts", user.getPosts());
         req.getRequestDispatcher("/user.jsp").forward(req, resp);
     }
 }
