@@ -22,8 +22,11 @@ public class RegServlet extends HttpServlet {
         String firstName = req.getParameter("firstName");
         String login = req.getParameter("login");
         String password = req.getParameter("password");
+        req.setAttribute("regError", false);
+        req.setAttribute("regLoginError", false);
 
         if (firstName.equals("") || login.equals("") || password.equals("")) {
+            req.setAttribute("regError", true);
             req.getRequestDispatcher("/reg.jsp").forward(req, resp);
         }
 
@@ -31,11 +34,14 @@ public class RegServlet extends HttpServlet {
         Map<String, User> userMap = (Map<String, User>) req.getServletContext().getAttribute("userMap");
         for (String key: userMap.keySet()) {
             if (key.equals(login)) {
+                req.setAttribute("regLoginError", true);
                 req.getRequestDispatcher("/reg.jsp").forward(req, resp);
             }
         }
-        User newUser = new User(firstName, "", "", "", "", login, password);
-        userMap.put(newUser.getLogin(), newUser);
-        resp.sendRedirect("/index.jsp");
+        if (!(boolean)req.getAttribute("regLoginError")){
+            User newUser = new User(firstName, "", "", "", "", login, password);
+            userMap.put(newUser.getLogin(), newUser);
+            resp.sendRedirect("/index.jsp");
+        }
     }
 }

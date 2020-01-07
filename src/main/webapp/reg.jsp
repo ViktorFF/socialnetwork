@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Universe - Registration</title>
@@ -18,15 +19,19 @@
                 <label>Login:
                     <input type="email" name="login" required placeholder="Login">
                 </label>
+                <c:if test="${requestScope.regLoginError}">
+                    An account already exists with this login!
+                </c:if>
             </p>
             <p>
                 <label>Password:
                     <input type="password" name="password" required placeholder="Password">
                 </label>
             </p>
-            <p>
-                <button type="submit">Registry</button>
-            </p>
+            <c:if test="${requestScope.regError}">
+                <p>Fill in all the fields!</p>
+            </c:if>
+            <p><button type="submit">Registry</button></p>
         </form>
         <form action="index.jsp" method="get">
             <button type="submit">Cancel</button>

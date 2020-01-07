@@ -14,15 +14,9 @@
             <%= request.getSession().getAttribute("userFirstName")%>
             <%= request.getSession().getAttribute("userLastName")%>
         </h2>
-        <p>
-            Birthday: <%= request.getSession().getAttribute("userBirthday")%>
-        </p>
-        <p>
-            Country: <%= request.getSession().getAttribute("userCountry")%>
-        </p>
-        <p>
-            City: <%= request.getSession().getAttribute("userCity")%>
-        </p>
+        <p>Birthday: <%= request.getSession().getAttribute("userBirthday")%></p>
+        <p>Country: <%= request.getSession().getAttribute("userCountry")%></p>
+        <p>City: <%= request.getSession().getAttribute("userCity")%></p>
     </section>
     <section>
         <form action="profile" method="get">
@@ -40,7 +34,7 @@
         <form action="post" method="post">
             <p>
                 <label>
-                    <textarea rows="5" cols="45" name="postText"></textarea>
+                    <textarea rows="5" cols="45" wrap="hard" name="postText" required></textarea> <%-- fix it later --%>
                 </label>
             </p>
             <p><button type="submit" name="post" value="post">Post</button></p>
@@ -63,7 +57,7 @@
                 </p>
                 <p>
                     <label>
-                        <textarea rows="5" cols="45" name="commentText"></textarea>
+                        <textarea rows="5" cols="45" wrap="hard" name="commentText"></textarea> <%-- fix it later --%>
                     </label>
                 </p>
                 <p><button type="submit" name="comment" value="${post.getId()}">Comment</button></p>

@@ -10,7 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.time.LocalDateTime;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 @WebServlet(urlPatterns = "/post")
 public class PostServlet extends HttpServlet {
@@ -18,15 +20,17 @@ public class PostServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         User user;
         User currentUser = (User) req.getSession().getAttribute("currentUser");
+        String userName = currentUser.getFirstName() + " " + currentUser.getLastName();
+        String date = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss", Locale.ENGLISH).format(new Date());
         if ((boolean) req.getSession().getAttribute("currentUserFlag")) {
-            user = (User) req.getSession().getAttribute("currentUser");
+            user = currentUser;
         } else {
             user = (User) req.getSession().getAttribute("user");
         }
 
-        if (req.getParameter("post") != null && req.getParameter("post").equals("post")) {
-            user.getPosts().add(new Post(currentUser.getFirstName() + " " + currentUser.getLastName(),
-                    req.getParameter("postText"), LocalDateTime.now().toString()));
+        if (req.getParameter("post") != null &&
+                req.getParameter("post").equals("post")) {
+            user.getPosts().add(new Post(userName, req.getParameter("postText"), date));
             resp.sendRedirect("/user.jsp");
         }
 
@@ -38,9 +42,9 @@ public class PostServlet extends HttpServlet {
         }
 
         for (Post post: user.getPosts()) {
-            if (req.getParameter("comment") != null && post.getId() == Integer.parseInt(req.getParameter("comment"))) {
-                post.getComments().add(new Comment(currentUser.getFirstName() + " " + currentUser.getLastName(),
-                        req.getParameter("commentText"), LocalDateTime.now().toString()));
+            if (req.getParameter("comment") != null &&
+                    post.getId() == Integer.parseInt(req.getParameter("comment"))) {
+                post.getComments().add(new Comment(userName, req.getParameter("commentText"), date));
                 resp.sendRedirect("/user.jsp");
             }
         }

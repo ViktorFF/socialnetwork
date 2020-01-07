@@ -9,12 +9,8 @@
     </header>
     <main>
         <form action="change" method="get">
-            <p>
-                ID: #<%= request.getSession().getAttribute("currentUserId")%>
-            </p>
-            <p>
-                Role: <%= request.getSession().getAttribute("currentUserRole")%>
-            </p>
+            <p>ID: #<%= request.getSession().getAttribute("currentUserId")%></p>
+            <p>Role: <%= request.getSession().getAttribute("currentUserRole")%></p>
             <p>
                 First Name: <%= request.getSession().getAttribute("currentUserFirstName")%>
                 <button type="submit" name="fieldChange" value="firstName">Change</button>

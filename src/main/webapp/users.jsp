@@ -9,8 +9,8 @@
         <h1>Users</h1>
     </header>
     <main>
-        <form action="mainPage" method="get">
-            <button type="submit">Main Page</button>
+        <form action="user" method="get">
+            <button type="submit">Back</button>
         </form>
         <c:forEach var="user" items="${applicationScope.users}">
             <form action="users" method="post">

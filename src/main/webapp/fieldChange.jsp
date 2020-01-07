@@ -10,9 +10,7 @@
     </header>
     <main>
         <form action="change" method="post">
-            <p>
-                Old value: <%= request.getSession().getAttribute("oldValue")%>
-            </p>
+            <p>Old value: <%= request.getSession().getAttribute("oldValue")%></p>
             <c:if test="${!requestScope.birthdayFlag}">
                 <p>
                     <label>New value:
@@ -54,9 +52,7 @@
                     </label>
                 </p>
             </c:if>
-            <p>
-                <button type="submit">Change</button>
-            </p>
+            <p><button type="submit">Change</button></p>
         </form>
         <form action="profile" method="get">
             <button type="submit">Cancel</button>
