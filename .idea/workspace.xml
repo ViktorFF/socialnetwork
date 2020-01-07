@@ -7,15 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be697198-27b2-4290-b645-88145d02cbfd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/errorPage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/universe/servlet/PostServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/universe/servlet/PostServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/universe/servlet/RegServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/universe/servlet/RegServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/auth.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/auth.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/fieldChange.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fieldChange.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/reg.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/reg.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/user.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/users.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/users.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -238,7 +232,8 @@
       <workItem from="1578159325745" duration="20754000" />
       <workItem from="1578309421811" duration="5319000" />
       <workItem from="1578315335868" duration="34059000" />
-      <workItem from="1578407894464" duration="6240000" />
+      <workItem from="1578407894464" duration="6374000" />
+      <workItem from="1578427363787" duration="2401000" />
     </task>
     <task id="LOCAL-00001" summary="fix#1&#10;Registration, authentication and exit added to the project">
       <created>1578166939446</created>
@@ -289,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578353635111</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fix#7&#10;reg and auth fixes">
+      <created>1578414498839</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1578414498839</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,6 +317,7 @@
     <MESSAGE value="fix#4&#10;Setting profile functionality #2" />
     <MESSAGE value="fix#5&#10;added viewing of information of other users" />
     <MESSAGE value="fix#6&#10;posts have been added" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix#6&#10;posts have been added" />
+    <MESSAGE value="fix#7&#10;reg and auth fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix#7&#10;reg and auth fixes" />
   </component>
 </project>
